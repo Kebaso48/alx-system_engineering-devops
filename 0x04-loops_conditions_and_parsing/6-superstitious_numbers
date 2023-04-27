@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Displays 1 to 20 with "bad luc from china" after 4,
+# "bad luck from Japan" after 9, "bad luck from Italy" after 17
+
+c=1
+
+while [ $c -le 20 ]
+do
+	echo "$c"
+	case $c in
+		"4") echo "bad luck from China";;
+		"9") echo "bad luck from Japan";;
+		"17") echo "bad luck from Italy";;
+	esac
+	(( c++ ))
+done
